@@ -23,3 +23,5 @@ The Encode Model data is then quantized into a packed bit format and output to t
 Decoding the packed bits into PCM time samples, uses a similar procedure. In this case, however, four Decode Models are created. One for each 10ms sound segment are synthesized. The quantized voice index is used to get the fixed size 20 harmonics from the codebook, and then using the phase, amplitude, and voicing information, converts that back to a number of harmonics compatible with the original (up to 80). This is then converted back to the time domain and issued out as a block of PCM voice samples.
 
 <img src="codec2_700c.png" width="500">
+#### Coherent FDM
+A Coherent Frequency-Division Multiplex QPSK modem which can use this vocoder codec is also included here in a directory.
