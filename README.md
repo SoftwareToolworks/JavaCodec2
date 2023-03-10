@@ -26,3 +26,5 @@ Decoding the packed bits into PCM time samples, uses a similar procedure. In thi
 
 #### Coherent FDM
 A Coherent Frequency-Division Multiplex QPSK modem which can use this vocoder codec is also included here in a directory.
+#### Note
+Software copyrights and license remain with the originators. This is merely a translation put into an Object Oriented form.
