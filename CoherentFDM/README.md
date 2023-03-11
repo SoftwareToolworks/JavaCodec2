@@ -34,4 +34,4 @@ The modem operates with a center frequency of 1500 Hz. The initial FDM subcarrie
 
 The modem waveform consumes a different amount of bandwidth, depending on whether the diversity channel is enabled. About 750 Hz per group of seven subcarriers. Normally you would want to use diversity on shortwave, but optionally on VHF and above.
 
-The ITU emission designation is 150K0J2E for phone type payload.
+The ITU emission designation is 1K50J2E for phone type payload.
