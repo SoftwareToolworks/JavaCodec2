@@ -1,5 +1,7 @@
-#### A Codec2 Mode 700C Speech Vocoder in Java
-This is a translation of the Codec2 700 bit/sec Vocoder into Java.
+#### Codec2 700C Speech Vocoder and FDM Modem in Native Java
+This is a translation of the Codec2 700 bit/sec Speech Vocoder, and the Coherent PSK Modem into Java.
+
+While Java is not a good candidate for firmware, it is a good candidate for Desktop and Server applications, where the ease of creating Graphhical User Interfaces, and multi-threaded parallel designs.
 
 The Mode 700C Vocoder has a very large codebook, which is greater than Java can handle in a static constant assignment, so the solution was to read in the text files at initialization. This particular vocoder is used in a number of Codec2 modems: OFDM, COFDM, and FSK.
 
@@ -9,7 +11,7 @@ When you build your application, create a ```lib``` directory and put both the `
 
 <img src="codectest.png" width="500">
 
-#### Simplified Theory
+#### Speech Vocoder Simplified Theory
 The program operates on blocks of PCM audio that is sampled at 8 kHz into 15-bits plus sign. A block of 320 samples (equivalent to 40ms) is then analyzed as four segments of 80 samples (10ms).
 
 These four segments are filtered and converted to the frequency domain, where the pitch and number of harmonics is determined. This information is put into a Encode Model structure.
@@ -24,7 +26,7 @@ Decoding the packed bits into PCM time samples, uses a similar procedure. In thi
 
 <img src="codec2_700c.png" width="500">   
 
-#### Coherent FDM
-A Coherent Frequency-Division Multiplex QPSK modem which can use this vocoder codec is also included here in a directory.
+#### Coherent Phase-Shift Keying Frequency-Division Multiplex Modem
+A Coherent Frequency-Division Multiplex QPSK modem designed to use this speech vocoder is also included in the repository. This modem is not the most popular one used today, but it is a great HF modem. I'm currently adapting the Orthogonal Frequency-Division Multiplex (OFDM) to Java, which is the most common modem used today.
 #### Note
 Software copyrights and license remain with the originators. This is merely a translation put into an Object Oriented form.
