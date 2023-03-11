@@ -308,8 +308,7 @@ public final class Amp implements IDefines {
             cf[i] = new Complex();
         }
 
-        /* install negative frequency components, 1/Nfft takes into
-            account kiss fft lack of scaling on ifft */
+        /* install negative frequency components */
         Sdb[0] = new Complex(Gdbfk[0], 0.0f);
 
         for (int i = 1; i < NS; i++) {
