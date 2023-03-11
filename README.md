@@ -1,7 +1,7 @@
 #### Codec2 700C Speech Vocoder and FDM Modem in Native Java
 This is a translation of the Codec2 700 bit/sec Speech Vocoder, and the Coherent PSK Modem into Java.
 
-While Java is not a good candidate for firmware, it is a good candidate for Desktop and Server applications, where the ease of creating Graphhical User Interfaces, and multi-threaded parallel designs.
+While Java is not a good candidate for firmware, it is a good candidate for Desktop and Server applications, where the ease of creating Graphhical User Interfaces GUI, and multi-threaded parallel designs.
 
 The Mode 700C Vocoder has a very large codebook, which is greater than Java can handle in a static constant assignment, so the solution was to read in the text files at initialization. This particular vocoder is used in a number of Codec2 modems: OFDM, COFDM, and FSK.
 
